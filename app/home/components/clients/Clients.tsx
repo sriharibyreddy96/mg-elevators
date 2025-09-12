@@ -3,21 +3,21 @@ import styles from "./Clients.module.css";
 import Image from "next/image";
 
 const clientLogos = [
-  "/assets/Clients/Client1.jpg",
-  "/assets/Clients/Client2.jpg",
-  "/assets/Clients/Client3.jpg",
-  "/assets/Clients/Client4.jpg",
-  "/assets/Clients/Client5.jpg",
-  "/assets/Clients/Client6.jpg",
-  "/assets/Clients/Client7.jpg",
-  "/assets/Clients/Client8.jpg",
-  "/assets/Clients/Client9.jpg",
-  "/assets/Clients/Client10.jpg",
-  "/assets/Clients/Client11.jpg",
-  "/assets/Clients/Client12.jpg",
-  "/assets/Clients/Client13.jpg",
-  "/assets/Clients/Client14.jpg",
-  "/assets/Clients/Client15.jpg",
+  "./assets/Clients/Client1.jpg",
+  "./assets/Clients/Client2.jpg",
+  "./assets/Clients/Client3.jpg",
+  "./assets/Clients/Client4.jpg",
+  "./assets/Clients/Client5.jpg",
+  "./assets/Clients/Client6.jpg",
+  "./assets/Clients/Client7.jpg",
+  "./assets/Clients/Client8.jpg",
+  "./assets/Clients/Client9.jpg",
+  "./assets/Clients/Client10.jpg",
+  "./assets/Clients/Client11.jpg",
+  "./assets/Clients/Client12.jpg",
+  "./assets/Clients/Client13.jpg",
+  "./assets/Clients/Client14.jpg",
+  "./assets/Clients/Client15.jpg",
 ];
 
 export default function Clients() {

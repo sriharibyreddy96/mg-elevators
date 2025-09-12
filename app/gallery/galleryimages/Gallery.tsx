@@ -6,23 +6,23 @@ import styles from "./Gallery.module.css";
 const sections = [
   {
     title: "Home Elevators",
-    images: Array.from({ length: 10 }, (_, i) => `/assets/gallery/home/home${i + 1}.jpg`),
+    images: Array.from({ length: 10 }, (_, i) => `./assets/gallery/home/home${i + 1}.jpg`),
   },
   {
     title: "Office Elevators",
-    images: Array.from({ length: 13 }, (_, i) => `/assets/gallery/office/office${i + 1}.jpeg`),
+    images: Array.from({ length: 13 }, (_, i) => `./assets/gallery/office/office${i + 1}.jpeg`),
   },
   {
     title: "Hospital Elevators",
-    images: Array.from({ length: 8 }, (_, i) => `/assets/gallery/hospital/hospital${i + 1}.jpeg`),
+    images: Array.from({ length: 8 }, (_, i) => `./assets/gallery/hospital/hospital${i + 1}.jpeg`),
   },
   {
     title: "Hydraulic Elevators",
-    images: Array.from({ length: 9 }, (_, i) => `/assets/gallery/hydraulic/hydraulic${i + 1}.jpeg`),
+    images: Array.from({ length: 9 }, (_, i) => `./assets/gallery/hydraulic/hydraulic${i + 1}.jpeg`),
   },
   {
     title: "Additional Elevators",
-    images: Array.from({ length: 4 }, (_, i) => `/assets/gallery/additional/additional${i + 1}.jpeg`),
+    images: Array.from({ length: 4 }, (_, i) => `./assets/gallery/additional/additional${i + 1}.jpeg`),
   },
 ];
 
