@@ -1,0 +1,93 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./../../public/assets/background/Elevator_Background_3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90%;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 640px) {
+  .hero {
+    height: 70vh;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .overlay {
+    padding: 1rem;
+  }
+}

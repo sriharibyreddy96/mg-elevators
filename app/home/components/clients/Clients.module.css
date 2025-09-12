@@ -1,0 +1,42 @@
+.clientsSection {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #000080; /* Navy color */
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #b9d9eb; /* Light blue border */
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(65, 105, 225, 0.3); /* RoyalBlue shadow */
+}
+
+.logo {
+  width: 120px;
+  height: 80px;
+  object-fit: contain; /* ensures full image is visible */
+}

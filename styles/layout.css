@@ -1,0 +1,103 @@
+/* ============================= */
+/* Navbar Header                 */
+/* ============================= */
+.header {
+  background-color: #00008b; /* royal blue */
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 139, 0.35);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar container */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================= */
+/* Logo                          */
+/* ============================= */
+.logo img {
+  height: auto;
+  max-height: 40px;
+  width: 100px;
+  object-fit: cover;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* ============================= */
+/* Nav Links                     */
+/* ============================= */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links li a:hover {
+  color: #7cb9e8; /* sky blue */
+}
+
+/* ============================= */
+/* Menu Icon (Hamburger/Close)   */
+/* ============================= */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* Mobile Styles                 */
+/* ============================= */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #4169e1;
+    flex-direction: column;
+    width: 220px;
+    padding: 1.5rem 1rem;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 0 0 0 12px;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* ============================= */
+/* Footer                        */
+/* ============================= */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #00008b; /* dark blue */
+  color: white;
+  margin-top: 3rem;
+}

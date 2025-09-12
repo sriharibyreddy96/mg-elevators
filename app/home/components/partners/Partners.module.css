@@ -1,0 +1,57 @@
+.partnersSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #b9d9eb 0%, #ffffff 100%);
+  text-align: center;
+  border-top: 5px solid #4169e1; /* strong highlight */
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000080; /* navy */
+  position: relative;
+  display: inline-block;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #4b9cd3; /* blue underline */
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #4b9cd3; /* highlight border */
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(65, 105, 225, 0.3);
+}
+
+.logo {
+  width: 140px;
+  height: 90px;
+  object-fit: contain;
+}

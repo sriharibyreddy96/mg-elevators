@@ -1,0 +1,88 @@
+/* Section wrapper */
+.section {
+  background: #f7fbff;
+  padding: 60px 20px;
+}
+
+/* Each category block */
+.category {
+  margin-bottom: 70px;
+}
+
+/* Headings aligned left */
+.heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000080;
+  margin-bottom: 24px;
+  text-align: left;
+  border-left: 6px solid #4169e1;
+  padding-left: 12px;
+}
+
+/* Image grid: 4 columns by default */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Each card */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #fff;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Images inside cards - fixed size */
+.image {
+  width: 100%;
+  height: 260px; /* Fixed uniform height */
+  object-fit: cover; /* Crop nicely */
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect on hover */
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  .image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    font-size: 1.4rem;
+  }
+  .image {
+    height: 180px;
+  }
+}

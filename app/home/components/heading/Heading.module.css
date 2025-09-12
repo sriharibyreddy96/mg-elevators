@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.headingBox {
+  width: 95%;
+  height: 100%;
+  background: linear-gradient(90deg, #4169E1, #000080, #4B9CD3);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    2px 2px 8px rgba(65, 105, 225, 0.7),
+    0 0 15px rgba(0, 0, 128, 0.8),
+    inset 0 0 10px rgba(75, 156, 211, 0.6);
+  padding: 0 1rem; /* Add some horizontal padding on small devices */
+}
+
+.heading {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow:
+    2px 2px 4px #000080,
+    0 0 8px #4B9CD3;
+  margin: 0;
+  user-select: none;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Responsive styles */
+
+/* Medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .container {
+    height: 12vh;
+    margin-top: 20px;
+  }
+
+  .headingBox {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+}
+
+/* Small screens (phones, 480px and below) */
+@media (max-width: 480px) {
+  .container {
+    height: 11vh;
+    margin-top: 15px;
+  }
+
+  .headingBox {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}

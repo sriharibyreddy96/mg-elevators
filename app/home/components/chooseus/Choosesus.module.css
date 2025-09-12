@@ -1,0 +1,116 @@
+.chooseUsSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000080; /* Navy */
+  margin-bottom: 40px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row desktop */
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(65, 105, 225, 0.65); /* Royal Blue overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Rotating border */
+.border {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  background: conic-gradient(
+    from 0deg,
+    #4169e1,
+    #4b9cd3,
+    #b9d9eb,
+    #000080,
+    #4169e1
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  animation: spin 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    height: 240px;
+  }
+  .overlay h3 {
+    font-size: 1.1rem;
+  }
+  .overlay p {
+    font-size: 0.85rem;
+  }
+}
