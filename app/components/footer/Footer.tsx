@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <Image src={logo} alt="MG Elevators Logo" width={120} height={40} />
           </div>
           <div className={styles.socialIcons}>
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/1BfNWxKj5j/" aria-label="Facebook">
               <FaFacebookF />
             </a>
             <a href="#" aria-label="Twitter">
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             <a href="#" aria-label="LinkedIn">
               <FaLinkedinIn />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/mg.elevators?igsh=MTl6dmIwbHI3YmdzNg==" aria-label="Instagram">
               <FaInstagram />
             </a>
           </div>

@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background: #000080;
+}
+
+.card {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+  padding: 1.5rem;
+  border: 3px solid #4169e1; /* ✅ same border color */
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4b9cd3; /* ✅ same text color */
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000080; /* ✅ same number color */
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .container {
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+}

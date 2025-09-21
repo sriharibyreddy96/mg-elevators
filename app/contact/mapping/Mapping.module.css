@@ -1,145 +1,37 @@
 .mappingSection {
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  background: linear-gradient(135deg, #b3d9f7, #e6f0fa);
-  min-height: 60vh; /* 👈 60–70% viewport height */
-  max-height: 70vh;
+  width: 100%;
+  height: 70vh; /* 60-70% viewport height */
+  max-height: 700px;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 50, 0.2);
-  gap: 2rem;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-/* Map container */
-.mapContainer {
-  flex: 1;
-  min-height: 300px;
-}
-
+/* Map iframe */
 .map {
   width: 100%;
   height: 100%;
   border: 0;
-  border-radius: 14px;
-  min-height: 300px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .map:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.2);
 }
 
-/* Info Card */
-.infoCard {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  background: rgba(0, 51, 102, 0.75);
-  border-radius: 14px;
-  padding: 2rem;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
+/* Responsive */
+@media (max-width: 1024px) {
+  .mappingSection {
+    height: 60vh;
+  }
 }
 
-/* Background blur */
-.infoCard::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("/assets/gallery/home/home1.jpg") no-repeat center center /
-    cover;
-  filter: blur(12px);
-  transform: scale(1.1);
-  z-index: 0;
-  opacity: 0.5;
-}
-
-.infoCard::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 64, 128, 0.55);
-  z-index: 1;
-}
-
-.infoCardContent {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Address & Hours boxes */
-.addressBox,
-.hoursBox {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 1.2rem 1.5rem;
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.addressBox:hover,
-.hoursBox:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 60, 0.3);
-}
-
-.addressBox h2,
-.hoursBox h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: #e6f2ff;
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
-}
-
-.addressBox p,
-.hoursBox ul li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #f0f8ff;
-}
-
-.hoursBox ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.4rem;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .mappingSection {
-    flex-direction: column;
-    min-height: auto;
-    max-height: none;
-  }
-
-  .mapContainer,
-  .infoCard {
-    flex: none;
-    width: 100%;
-    min-height: 250px;
-  }
-
-  .infoCardContent {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-
-  .hoursBox ul {
-    text-align: center;
+    height: 50vh;
   }
 }

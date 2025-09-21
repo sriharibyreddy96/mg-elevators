@@ -1,38 +1,6 @@
-// import "./../styles/globals.css";
-// import "./../styles/layout.css";
-// import Footer from "./components/footer/Footer";
-// import Navbar from "./components/Navbar";
-// import Call from "./home/components/call/Call";
-// import Whatsapp from "./home/components/whatsapp/Whatsapp";
-
-// export const metadata = {
-//   title: "My Next.js App",
-//   description: "Next.js App with TypeScript and CSS",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         <Navbar /> {/* client component */}
-//         <main className="main-content">{children}</main>
-//         <Whatsapp />
-//         <Call />
-//         <Footer />
-//         {/* <footer className="footer">
-//           <p>© 2025 My Next.js App. All rights reserved.</p>
-//         </footer> */}
-//       </body>
-//     </html>
-//   );
-// }
-
 import "./../styles/globals.css";
 import "./../styles/layout.css";
+import ContactFormModal from "./components/contactformmodal/ContactFormModal";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/Navbar";
 import Call from "./home/components/call/Call";
@@ -60,6 +28,7 @@ export default function RootLayout({
         <Whatsapp />
         <Call />
         <Footer />
+        <ContactFormModal />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import Benefits from "./home/components/benefits/Benefits";
 import Cards from "./home/components/cards/Cards";
 import ChooseUs from "./home/components/chooseus/Choosesus";
 import Clients from "./home/components/clients/Clients";
+import CountUpSection from "./home/components/countup/CountUp";
 import FAQs from "./home/components/faqs/Faqs";
 import Heading from "./home/components/heading/Heading";
 import Partners from "./home/components/partners/Partners";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Heading />
       <Cards />
+      <CountUpSection />
       <Benefits />
       <Clients />
       <Reviews />

@@ -1,66 +1,56 @@
 .contactSection {
   padding: 3rem 2rem;
+  background: #f4f6fb;
 }
 
 .heading {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #4169e1;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .container {
   display: flex;
-  gap: 0;
+  gap: 2rem;
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Left Side Image */
+/* Left - Form */
 .left {
   flex: 1;
-  position: relative;
-}
-
-.contactImage {
-  object-fit: cover;
-}
-
-/* Right Side Form */
-.right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
+  background: #ffffff;
   padding: 2rem;
+  margin: 1rem;
+  border-radius: 12px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 100%;
 }
 
 .form input,
 .form select,
 .form textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
+  padding: 0.8rem 1rem;
+  border: 1px solid #4b9cd3;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
-  transition: border 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .form input:focus,
 .form select:focus,
 .form textarea:focus {
   border-color: #4169e1;
+  box-shadow: 0 0 5px rgba(65, 105, 225, 0.5);
 }
 
 .submitBtn {
@@ -72,11 +62,43 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .submitBtn:hover {
-  background: #27408b;
+  background: #000080;
+  transform: translateY(-2px);
+}
+
+/* Right - Info Card */
+.right {
+  flex: 1;
+  background: linear-gradient(135deg, #b9d9eb, #4b9cd3);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 12px;
+  color: #000080;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoCard h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.infoCard h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Responsive */
@@ -85,13 +107,36 @@
     flex-direction: column;
   }
 
-  .left {
+  .left,
+  .right {
     width: 100%;
-    height: 250px;
   }
 
   .right {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+    .left,
+  .right {
     width: 100%;
-    padding: 1.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .infoCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .infoCard h4 {
+    font-size: 1.1rem;
+  }
+
+  .infoCard p {
+    font-size: 0.95rem;
   }
 }

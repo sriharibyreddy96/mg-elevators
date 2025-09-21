@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Cards.module.css";
+import Link from "next/link";
 
 interface CardProps {
   tag: string;
@@ -14,7 +15,11 @@ export default function Card({ tag, image, description }: CardProps) {
       <img src={image} alt={`${tag} elevator`} className={styles.image} />
       <div className={styles.content}>
         <p className={styles.description}>{description}</p>
-        <button className={styles.button}>Details</button>
+        <button className={styles.button}>
+          <Link href="/contact" className={styles.contactBtn}>
+                      Details
+                    </Link>
+        </button>
       </div>
     </div>
   );

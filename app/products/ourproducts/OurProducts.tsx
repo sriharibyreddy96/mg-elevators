@@ -3,61 +3,85 @@ import React from "react";
 import styles from "./OurProducts.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { FaAngleDoubleRight, FaAngleRight } from "react-icons/fa";
 
-interface Product {
+interface SubProduct {
   title: string;
   description: string;
   image: string;
 }
 
+interface Product {
+  title: string;
+  subProducts?: SubProduct[];
+  description?: string;
+  image?: string;
+}
+
 const products: Product[] = [
   {
-    title: "Passenger (Auto and Manual)",
-    description:
-      "Our passenger elevators, available in both automatic and manual models, are designed for smooth, safe, and comfortable vertical transportation. Perfect for residential, commercial, and corporate buildings.",
-    image: "./assets/products/home1.jpg",
-  },
-  {
-    title: "Home Elevators",
-    description:
-      "Home elevators add elegance and convenience to your house. Built with cutting-edge technology, these lifts are space-efficient and provide unmatched comfort for everyday living.",
-    image: "./assets/products/home2.jpg",
-  },
-  {
-    title: "Hospital Elevators",
-    description:
-      "Hospital elevators are engineered with precision for patient safety and quick mobility. Spacious cabins and smooth operation ensure seamless transportation of stretchers and medical equipment.",
-    image: "./assets/products/home3.jpg",
+    title: "Residential Elevators",
+    subProducts: [
+      {
+        title: "Auto Door",
+        description:
+          "Our auto-door residential elevators ensure modern convenience with smooth, automated operation and enhanced safety.",
+        image: "./assets/products/AutoDoor1.jpg",
+      },
+      {
+        title: "Manual Door",
+        description:
+          "Manual door elevators are cost-effective, reliable, and ideal for residential use, offering easy operation and durability.",
+        image: "./assets/products/ManualDoor.jpg",
+      },
+    ],
   },
   {
     title: "Hydraulic Elevators",
     description:
-      "Hydraulic elevators are known for their high load capacity and efficiency. Ideal for low to mid-rise buildings, they deliver reliable performance with minimal maintenance requirements.",
-    image: "./assets/products/home4.jpg",
+      "Hydraulic elevators are built for durability and high load capacity, best suited for low to mid-rise buildings.",
+    image: "./assets/products/Hydraulic.jpg",
+  },
+  {
+    title: "Home Elevators",
+    subProducts: [
+      {
+        title: "MRL Lifts",
+        description:
+          "Machine Room Less (MRL) lifts save space while providing efficient vertical transportation for modern homes.",
+        image: "./assets/products/MRL_Lift.jpg",
+      },
+      {
+        title: "Belt Lifts",
+        description:
+          "Belt-driven lifts are designed for silent operation and energy efficiency, enhancing residential comfort.",
+        image: "./assets/products/Belt_Lift.jpg",
+      },
+      {
+        title: "Traction Lifts",
+        description:
+          "Traction lifts deliver a smooth, fast, and safe experience, perfect for high-rise residential and commercial spaces.",
+        image: "./assets/products/Fraction_lift.jpg",
+      },
+    ],
   },
   {
     title: "Goods Elevators",
     description:
-      "Built to carry heavy loads, our goods elevators are rugged and durable. Designed for warehouses, factories, and industries, they ensure safe and reliable movement of goods.",
-    image: "./assets/products/home5.jpg",
+      "Goods elevators are heavy-duty lifts designed to transport large and bulky items in warehouses, factories, and industries.",
+    image: "./assets/products/Goods_Lift.jpg",
   },
   {
-    title: "Flame Proof Elevators",
+    title: "Structure Elevators",
     description:
-      "Our flame-proof elevators are designed for hazardous environments. They meet strict safety standards, ensuring secure and uninterrupted operations in sensitive areas.",
-    image: "./assets/products/home6.jpg",
+      "Structure elevators are self-supporting and can be installed without a machine room or shaft wall, ideal for retrofits.",
+    image: "./assets/products/Structure_Lift.jpg",
   },
   {
-    title: "Car Elevators",
+    title: "Commercial Elevators",
     description:
-      "Car elevators provide efficient parking solutions for luxury apartments and commercial complexes. They maximize space utilization while ensuring the safe handling of vehicles.",
-    image: "./assets/products/home7.jpg",
-  },
-  {
-    title: "Capsule Elevators",
-    description:
-      "Capsule elevators enhance the architectural beauty of buildings with their panoramic glass design. They combine aesthetics with functionality, offering a luxurious riding experience.",
-    image: "./assets/products/home8.jpg",
+      "Commercial elevators are built for heavy usage, combining aesthetics and performance for offices, malls, and complexes.",
+    image: "./assets/products/Commercial_Lifts.jpeg",
   },
 ];
 
@@ -65,29 +89,80 @@ export default function OurProducts() {
   return (
     <section className={styles.productsSection}>
       <h2 className={styles.sectionTitle}>Our Products</h2>
+
       {products.map((product, index) => (
         <div
           key={index}
-          className={`${styles.productCard} ${
-            index % 2 === 0 ? styles.leftImage : styles.rightImage
-          }`}
+          id={product.title.toLowerCase().replace(/\s+/g, "-")}
+          className={`${styles.mainProduct} ${styles["bg" + ((index % 6) + 1)]}`}
         >
-          <div className={styles.imageWrapper}>
-            <Image
-              src={product.image}
-              alt={product.title}
-              width={400}
-              height={300}
-              quality={90}
-            />
-          </div>
-          <div className={styles.content}>
-            <h1>{product.title}</h1>
-            <p>{product.description}</p>
-            <Link href="/contact" className={styles.contactBtn}>
-              Contact Us
-            </Link>
-          </div>
+          {/* Main Heading */}
+          <h3 className={styles.mainHeading}>
+            <FaAngleDoubleRight className={styles.icon} />
+            {product.title}
+          </h3>
+
+          {product.subProducts ? (
+            <div className={styles.subProductsWrapper}>
+              {product.subProducts.map((sub, subIndex) => (
+                <div
+                  key={subIndex}
+                  id={sub.title.toLowerCase().replace(/\s+/g, "-")}
+                  className={`${styles.productCard} ${
+                    subIndex % 2 === 0 ? styles.leftImage : styles.rightImage
+                  }`}
+                >
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={sub.image}
+                      alt={sub.title}
+                      width={400}
+                      height={300}
+                      quality={90}
+                    />
+                  </div>
+                  <div className={styles.content}>
+                    <h4 className={styles.subHeading}>
+                      <FaAngleRight className={styles.iconSmall} />
+                      {sub.title}
+                    </h4>
+                    <p>{sub.description}</p>
+                    <p className={styles.supportText}>
+                      For sales inquiries and support, or any questions regarding our products, please contact us. Our team is always ready to assist you promptly.
+                    </p>
+                    <Link href="/contact" className={styles.contactBtn}>
+                      Contact Us
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              className={`${styles.productCard} ${
+                index % 2 === 0 ? styles.leftImage : styles.rightImage
+              }`}
+            >
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={product.image || ""}
+                  alt={product.title}
+                  width={400}
+                  height={300}
+                  quality={90}
+                />
+              </div>
+              <div className={styles.content}>
+                <p>{product.description}</p>
+                <p className={styles.supportText}>
+                  For sales inquiries and support, or any questions regarding our products, please contact us. Our team is always ready to assist you promptly.
+                </p>
+                <Link href="/contact" className={styles.contactBtn}>
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       ))}
     </section>

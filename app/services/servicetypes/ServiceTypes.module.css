@@ -23,7 +23,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  min-height: 320px;
+  min-height: 300px;
   display: flex;
   align-items: flex-end;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -41,14 +41,14 @@
 
 .bgImage {
   object-fit: cover;
-  filter: blur(6px);
+  filter: blur(1px);
   z-index: 1;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 128, 255, 0.55);
+  background: rgb(90, 137, 255);
   z-index: 1;
 }
 
