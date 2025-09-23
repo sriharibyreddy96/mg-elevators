@@ -8,7 +8,6 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import styles from "./Footer.module.css";
-import logo from "public/assets/logo/Logo2.png";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
@@ -18,7 +17,7 @@ const Footer: React.FC = () => {
         {/* Left Side */}
         <div className={styles.left}>
           <div className={styles.logo}>
-            <Image src={logo} alt="MG Elevators Logo" width={120} height={40} />
+            <Image src="./assets/logo/Logo2.png" alt="MG Elevators Logo" width={120} height={40} />
           </div>
           <div className={styles.socialIcons}>
             <a href="https://www.facebook.com/share/1BfNWxKj5j/" aria-label="Facebook">

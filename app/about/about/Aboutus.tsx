@@ -1,8 +1,6 @@
 "use client";
 import styles from "./Aboutus.module.css";
 import Image from "next/image";
-import AboutImg from "public/assets/about/About_Background.png"
-import Founder from "public/assets/about/Founder.jpg"
 
 export default function Aboutus() {
   return (
@@ -11,7 +9,7 @@ export default function Aboutus() {
         {/* Left Side - Image */}
         <div className={styles.left}>
           <Image
-            src={AboutImg}
+            src="./assets/about/About_Background.png"
             alt="MG Elevators"
             width={600}
             height={500}
@@ -35,7 +33,7 @@ export default function Aboutus() {
           {/* Founder Section */}
           <div className={styles.founder}>
             <Image
-              src={Founder}
+              src="./assets/about/Founder.jpg"
               alt="Founder"
               width={80}
               height={80}

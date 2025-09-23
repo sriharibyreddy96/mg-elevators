@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "MG Elevators",
   description: "Elevating Comfort, Safety & Innovation for Homes, Apartments, and Hospitals",
   icons: {
-    icon: "/assets/favicon.png",
+    icon: "./assets/favicon.png",
   },
 };
 

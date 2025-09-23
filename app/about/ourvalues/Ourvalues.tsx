@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "./Ourvalues.module.css";
 import OurValue from "./Ourvalue";
-import OurValuesImg1 from "public/assets/background/Aboutus_Elevator2.jpeg"
 
 // First four option groups based on your earlier choices
 const VALUE_BLOCKS = [
@@ -13,7 +12,7 @@ const VALUE_BLOCKS = [
       "Reliability – Consistent uptime & smooth rides",
       "Customer Commitment – Long-term trust",
     ],
-    image: OurValuesImg1, // replace with your path
+    image: "./assets/background/Aboutus_Elevator2.jpeg", // replace with your path
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
   {
@@ -23,7 +22,7 @@ const VALUE_BLOCKS = [
       "Smart Mobility – Ready for smart buildings",
       "Sustainability – Energy-efficient systems",
     ],
-    image: OurValuesImg1,
+    image: "./assets/background/Aboutus_Elevator2.jpeg",
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
   {
@@ -33,7 +32,7 @@ const VALUE_BLOCKS = [
       "Ownership – Accountable end-to-end",
       "Compassion – Comfort & accessibility",
     ],
-    image: OurValuesImg1,
+    image: "./assets/background/Aboutus_Elevator2.jpeg",
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
   {
@@ -43,7 +42,7 @@ const VALUE_BLOCKS = [
       "Continuous Improvement – Evolving tech",
       "Service First – Fast, reliable support",
     ],
-    image: OurValuesImg1,
+    image: "./assets/background/Aboutus_Elevator2.jpeg",
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
 ];
@@ -60,7 +59,7 @@ const Ourvalues: React.FC = () => {
               key={idx}
               title={block.title}
               points={block.points}
-              image={block.image.src}
+              image={block.image}
               overlay={block.overlay}
             />
           ))}

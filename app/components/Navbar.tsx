@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes, FaAngleDown, FaAngleRight } from "react-icons/fa";
-import logo from "public/assets/logo/Logo2.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +47,7 @@ export default function Navbar() {
         <div className="logo">
           <Link href="/">
             <Image
-              src={logo}
+              src="./assets/logo/Logo2.png"
               alt="Logo"
               width={120}
               height={50}
