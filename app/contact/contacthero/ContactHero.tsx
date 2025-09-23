@@ -21,7 +21,7 @@ const ContactHero: React.FC = () => {
       {/* Background Image */}
       <div className={styles.background}>
         <Image
-          src="./assets/gallery/home/home1.jpg"
+          src="/assets/gallery/home/home1.jpg"
           alt="Contact Background"
           fill
           priority
