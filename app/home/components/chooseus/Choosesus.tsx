@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Choosesus.module.css";
-// import image1 from './../../../../public/assets/background/Elevator_Background_1.jpeg'
 
 const cards = [
   {

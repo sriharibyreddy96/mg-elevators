@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./Ourvalues.module.css";
 import OurValue from "./Ourvalue";
-import OurValuesImg1 from "../../../public/assets/background/Aboutus_Elevator2.jpeg"
+import OurValuesImg1 from "public/assets/background/Aboutus_Elevator2.jpeg"
 
 // First four option groups based on your earlier choices
 const VALUE_BLOCKS = [

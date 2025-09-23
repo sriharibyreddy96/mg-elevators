@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes, FaAngleDown, FaAngleRight } from "react-icons/fa";
-import logo from "./../../public/assets/logo/Logo2.png";
+import logo from "public/assets/logo/Logo2.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

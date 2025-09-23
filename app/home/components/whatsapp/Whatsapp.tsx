@@ -35,7 +35,7 @@ export default function Whatsapp() {
             </a>
             <hr className={styles.separator} />
             <a
-              href="https://wa.me/918885551399"
+              href="https://wa.me/919494573777"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.menuItem}

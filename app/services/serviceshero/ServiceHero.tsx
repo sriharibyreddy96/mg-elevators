@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./ServiceHero.module.css";
 import Image from "next/image";
-import bgImage from "../../../public/assets/services/Service_Hero.jpeg"; 
+import bgImage from "public/assets/services/Service_Hero.jpeg"; 
 
 const ServiceHero: React.FC = () => {
 

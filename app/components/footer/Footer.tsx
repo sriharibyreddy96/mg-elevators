@@ -8,7 +8,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import styles from "./Footer.module.css";
-import logo from "../../../public/assets/logo/Logo2.png";
+import logo from "public/assets/logo/Logo2.png";
 import Link from "next/link";
 
 const Footer: React.FC = () => {

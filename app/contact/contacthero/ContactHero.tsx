@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsWhatsapp } from "react-icons/bs";
 
-import bgImage from "../../../public/assets/gallery/home/home1.jpg"; // make sure image exists in public/assets
+import bgImage from "public/assets/gallery/home/home1.jpg"; // make sure image exists in public/assets
 
 const ContactHero: React.FC = () => {
   const phoneNumber = "+919494573777"; // change number here

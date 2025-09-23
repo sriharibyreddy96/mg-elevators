@@ -1,8 +1,8 @@
 "use client";
 import styles from "./Aboutus.module.css";
 import Image from "next/image";
-import AboutImg from "../../../public/assets/about/About_Background.png"
-import Founder from "../../../public/assets/about/Founder.jpg"
+import AboutImg from "public/assets/about/About_Background.png"
+import Founder from "public/assets/about/Founder.jpg"
 
 export default function Aboutus() {
   return (

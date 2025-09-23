@@ -14,16 +14,6 @@ const clientLogos = [
   "./assets/Clients/Client9.jpg",
   "./assets/Clients/Client10.jpg",
   "./assets/Clients/Client11.jpg",
-  "./assets/Clients/Client12.jpg",
-  "./assets/Clients/Client13.jpg",
-  "./assets/Clients/Client14.jpg",
-  "./assets/Clients/Client15.jpg",
-  "./assets/Clients/Client16.jpg",
-  "./assets/Clients/Client17.jpg",
-  "./assets/Clients/Client18.jpg",
-  "./assets/Clients/Client19.jpg",
-  "./assets/Clients/Client20.jpg",
-  "./assets/Clients/Client21.jpg",
 ];
 
 export default function Clients() {

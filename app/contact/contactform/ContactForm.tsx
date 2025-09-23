@@ -1,192 +1,10 @@
-// "use client";
-// import React, { useState } from "react";
-// import styles from "./ContactForm.module.css";
-// import emailjs from "@emailjs/browser";
-// import Image from "next/image";
-// import ContactImg from "./../../../public/assets/contact/Contact_Form.png";
-// import { toast, ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-
-// // EmailJS Config
-// const SERVICE_ID = "service_vgxvmzo";
-// const TEMPLATE_ID_ADMIN = "template_fhrrohy";
-// const TEMPLATE_ID_USER = "template_3d6i1wa";
-// const PUBLIC_KEY = "UgNJl_x2suAxwIvBH";
-
-// const ContactForm: React.FC = () => {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     mobile: "",
-//     location: "",
-//     product: "",
-//     queryType: "",
-//     message: "",
-//   });
-
-//   const handleChange = (
-//     e: React.ChangeEvent<
-//       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-//     >
-//   ) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const clearForm = () => {
-//     setFormData({
-//       name: "",
-//       email: "",
-//       mobile: "",
-//       location: "",
-//       product: "",
-//       queryType: "",
-//       message: "",
-//     });
-//   };
-
-//   const handleSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-
-//     const { name, email, mobile, location, product, queryType, message } =
-//       formData;
-
-//     if (
-//       !name ||
-//       !email ||
-//       !mobile ||
-//       !location ||
-//       !product ||
-//       !queryType ||
-//       !message
-//     ) {
-//       toast.error("⚠️ Please fill all required fields.", {
-//         position: "top-right",
-//       });
-//       return;
-//     }
-
-//     try {
-//       // Send email to admin
-//       await emailjs.send(SERVICE_ID, TEMPLATE_ID_ADMIN, formData, PUBLIC_KEY);
-
-//       // Send confirmation email to user
-//       await emailjs.send(SERVICE_ID, TEMPLATE_ID_USER, formData, PUBLIC_KEY);
-
-//       toast.success("✅ Message sent successfully!", {
-//         position: "top-right",
-//       });
-//       clearForm();
-//     } catch (error) {
-//       console.error("EmailJS Error:", error);
-//       toast.error("❌ Failed to send message. Please try again later.", {
-//         position: "top-right",
-//       });
-//     }
-//   };
-
-//   return (
-//     <section className={styles.contactSection}>
-//       <h2 className={styles.heading}>Contact Us If Any Queries</h2>
-//       <div className={styles.container}>
-//         {/* Left Side Image */}
-//         <div className={styles.left}>
-//           <Image
-//             src={ContactImg}
-//             alt="Contact Lift"
-//             className={styles.contactImage}
-//             fill
-//             priority
-//           />
-//         </div>
-
-//         {/* Right Side Form */}
-//         <div className={styles.right}>
-//           <form onSubmit={handleSubmit} className={styles.form}>
-//             <input
-//               type="text"
-//               name="name"
-//               placeholder="Your Name"
-//               value={formData.name}
-//               onChange={handleChange}
-//               required
-//             />
-//             <input
-//               type="email"
-//               name="email"
-//               placeholder="Your Email"
-//               value={formData.email}
-//               onChange={handleChange}
-//               required
-//             />
-//             <input
-//               type="tel"
-//               name="mobile"
-//               placeholder="Mobile Number"
-//               value={formData.mobile}
-//               onChange={handleChange}
-//               required
-//             />
-//             <input
-//               type="text"
-//               name="location"
-//               placeholder="Your Location"
-//               value={formData.location}
-//               onChange={handleChange}
-//               required
-//             />
-//             <select
-//               name="product"
-//               value={formData.product}
-//               onChange={handleChange}
-//               required
-//             >
-//               <option value="">Select Product</option>
-//               <option value="Home Elevator">Home Elevator</option>
-//               <option value="Apartment Elevator">Apartment Elevator</option>
-//               <option value="Hospital Elevator">Hospital Elevator</option>
-//               <option value="Commercial Elevator">Commercial Elevator</option>
-//               <option value="Other">Other</option>
-//             </select>
-//             <select
-//               name="queryType"
-//               value={formData.queryType}
-//               onChange={handleChange}
-//               required
-//             >
-//               <option value="">Sales & Service</option>
-//               <option value="Sales">Sales</option>
-//               <option value="Support">Support</option>
-//             </select>
-//             <textarea
-//               name="message"
-//               placeholder="Your Message"
-//               rows={4}
-//               value={formData.message}
-//               onChange={handleChange}
-//               required
-//             ></textarea>
-
-//             <button type="submit" className={styles.submitBtn}>
-//               Submit
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-
-//       {/* Toast Container */}
-//       <ToastContainer autoClose={3000} hideProgressBar={false} newestOnTop />
-//     </section>
-//   );
-// };
-
-// export default ContactForm;
-
 "use client";
 import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 // EmailJS Config
 const SERVICE_ID = "service_vgxvmzo";
@@ -278,8 +96,12 @@ const ContactForm: React.FC = () => {
             </p>
 
             <h4>Business Hours</h4>
-            <p>Mon - Fri: 9:00 AM – 6:00 PM</p>
-            <p>Saturday: 10:00 AM – 4:00 PM</p>
+            <p>Mon - Sat: 9:00 AM – 6:00 PM</p>
+            <p>In Emergency 24/7 Available 
+            <Link href="/contact" className={styles.contactBtn}>
+                      Contact Us
+                    </Link>  
+            </p>
             <p>Sunday: Closed</p>
           </div>
         </div>
