@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import styles from "./Footer.module.css";
 import Link from "next/link";
+import withBasePath from "../../utils/withBasePath"; // ✅ helper import
 
 const Footer: React.FC = () => {
   return (
@@ -17,7 +18,12 @@ const Footer: React.FC = () => {
         {/* Left Side */}
         <div className={styles.left}>
           <div className={styles.logo}>
-            <Image src="/assets/logo/Logo2.png" alt="MG Elevators Logo" width={120} height={40} />
+            <Image
+              src={withBasePath("/assets/logo/Logo2.png")} // ✅ wrapped with helper
+              alt="MG Elevators Logo"
+              width={120}
+              height={40}
+            />
           </div>
           <div className={styles.socialIcons}>
             <a href="https://www.facebook.com/share/1BfNWxKj5j/" aria-label="Facebook">
@@ -39,30 +45,12 @@ const Footer: React.FC = () => {
         <div className={styles.middle}>
           <h3 className={styles.heading}>Quick Links</h3>
           <ul>
-            <li>
-              <Link href="/" className={styles.contactBtn}>Home</Link>
-              {/* <a href="">Home</a> */}
-            </li>
-            <li>
-              <Link href="/about" className={styles.contactBtn}>About</Link>
-              {/* <a href="#">About Us</a> */}
-            </li>
-            <li>
-              <Link href="/services" className={styles.contactBtn}>Services</Link>
-              {/* <a href="#">Services</a> */}
-            </li>
-            <li>
-              <Link href="/products" className={styles.contactBtn}>Products</Link>
-              {/* <a href="#">Products</a> */}
-            </li>
-            <li>
-              <Link href="/gallery" className={styles.contactBtn}>Gallery</Link>
-              {/* <a href="#">Products</a> */}
-            </li>
-            <li>
-              <Link href="/contact" className={styles.contactBtn}>Contact Us</Link>
-              {/* <a href="#">Contact</a> */}
-            </li>
+            <li><Link href="/" className={styles.contactBtn}>Home</Link></li>
+            <li><Link href="/about" className={styles.contactBtn}>About</Link></li>
+            <li><Link href="/services" className={styles.contactBtn}>Services</Link></li>
+            <li><Link href="/products" className={styles.contactBtn}>Products</Link></li>
+            <li><Link href="/gallery" className={styles.contactBtn}>Gallery</Link></li>
+            <li><Link href="/contact" className={styles.contactBtn}>Contact Us</Link></li>
           </ul>
         </div>
 

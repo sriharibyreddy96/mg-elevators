@@ -6,12 +6,14 @@ import Navbar from "./components/Navbar";
 import Call from "./home/components/call/Call";
 import Whatsapp from "./home/components/whatsapp/Whatsapp";
 import type { Metadata } from "next";
+import withBasePath from "./utils/withBasePath"; // Ensure this exists
 
 export const metadata: Metadata = {
   title: "MG Elevators",
-  description: "Elevating Comfort, Safety & Innovation for Homes, Apartments, and Hospitals",
+  description:
+    "Elevating Comfort, Safety & Innovation for Homes, Apartments, and Hospitals",
   icons: {
-    icon: "/assets/favicon.png",
+    icon: withBasePath("/assets/favicon.png"), // Updated with base path
   },
 };
 

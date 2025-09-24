@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./ServiceTypes.module.css";
 import Image from "next/image";
+import withBasePath from "../../utils/withBasePath";
 import {
   FaHeadset,
   FaTools,
@@ -67,7 +68,7 @@ const ServiceTypes: React.FC = () => {
             {/* Background Image */}
             <div className={styles.imageWrapper}>
               <Image
-                src={service.image}
+                src={withBasePath(service.image)}
                 alt={service.title}
                 fill
                 className={styles.bgImage}

@@ -4,6 +4,7 @@ import styles from "./ContactHero.module.css";
 import Image from "next/image";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsWhatsapp } from "react-icons/bs";
+import withBasePath from "../../utils/withBasePath"; // ✅ import utility
 
 const ContactHero: React.FC = () => {
   const phoneNumber = "+919494573777"; // change number here
@@ -21,7 +22,7 @@ const ContactHero: React.FC = () => {
       {/* Background Image */}
       <div className={styles.background}>
         <Image
-          src="/assets/gallery/home/home1.jpg"
+          src={withBasePath("/assets/gallery/home/home1.jpg")} // ✅ updated with base path
           alt="Contact Background"
           fill
           priority

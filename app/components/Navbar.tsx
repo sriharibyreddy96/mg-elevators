@@ -3,52 +3,39 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes, FaAngleDown, FaAngleRight } from "react-icons/fa";
+import withBasePath from "../utils/withBasePath";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    function handleClickOutside(event: MouseEvent) {
+    const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setMenuOpen(false);
       }
-    }
-
-    if (menuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      document.removeEventListener("mousedown", handleClickOutside);
     };
+
+    if (menuOpen) document.addEventListener("mousedown", handleClickOutside);
+    else document.removeEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuOpen]);
 
-  const handleLinkClick = () => {
-    setMenuOpen(false);
-  };
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <nav className="nav" ref={menuRef}>
+        {/* Logo */}
         <div className="logo">
           <Link href="/">
             <Image
-              src="/assets/logo/Logo2.png"
-              alt="Logo"
+              src={withBasePath("/assets/logo/Logo2.png")}
+              alt="MG Elevators Logo"
               width={120}
               height={50}
               priority
@@ -57,23 +44,17 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link href="/" onClick={handleLinkClick}>
-              Home
-            </Link>
+            <Link href="/" onClick={handleLinkClick}>Home</Link>
           </li>
           <li>
-            <Link href="/about" onClick={handleLinkClick}>
-              About
-            </Link>
+            <Link href="/about" onClick={handleLinkClick}>About</Link>
           </li>
 
-          {/* ✅ Products Dropdown with hash links */}
+          {/* Products Dropdown */}
           <li className="dropdown">
-            {/* <span className="dropdown-toggle">
-              Products <FaAngleDown className="icon" />
-            </span> */}
             <Link
               href="/products"
               onClick={handleLinkClick}
@@ -94,10 +75,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/products#manual-door"
-                      onClick={handleLinkClick}
-                    >
+                    <Link href="/products#manual-door" onClick={handleLinkClick}>
                       Manual Door
                     </Link>
                   </li>
@@ -105,10 +83,7 @@ export default function Navbar() {
               </li>
 
               <li>
-                <Link
-                  href="/products#hydraulic-elevators"
-                  onClick={handleLinkClick}
-                >
+                <Link href="/products#hydraulic-elevators" onClick={handleLinkClick}>
                   Hydraulic Elevators
                 </Link>
               </li>
@@ -129,10 +104,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/products#traction-lifts"
-                      onClick={handleLinkClick}
-                    >
+                    <Link href="/products#traction-lifts" onClick={handleLinkClick}>
                       Traction Lifts
                     </Link>
                   </li>
@@ -140,26 +112,17 @@ export default function Navbar() {
               </li>
 
               <li>
-                <Link
-                  href="/products#goods-elevators"
-                  onClick={handleLinkClick}
-                >
+                <Link href="/products#goods-elevators" onClick={handleLinkClick}>
                   Goods Elevators
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/products#structure-elevators"
-                  onClick={handleLinkClick}
-                >
+                <Link href="/products#structure-elevators" onClick={handleLinkClick}>
                   Structure Elevators
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/products#commercial-elevators"
-                  onClick={handleLinkClick}
-                >
+                <Link href="/products#commercial-elevators" onClick={handleLinkClick}>
                   Commercial Elevators
                 </Link>
               </li>
@@ -167,23 +130,17 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/services" onClick={handleLinkClick}>
-              Services
-            </Link>
+            <Link href="/services" onClick={handleLinkClick}>Services</Link>
           </li>
           <li>
-            <Link href="/gallery" onClick={handleLinkClick}>
-              Gallery
-            </Link>
+            <Link href="/gallery" onClick={handleLinkClick}>Gallery</Link>
           </li>
           <li>
-            <Link href="/contact" onClick={handleLinkClick}>
-              Contact
-            </Link>
+            <Link href="/contact" onClick={handleLinkClick}>Contact</Link>
           </li>
         </ul>
 
-        {/* ✅ Toggle menu */}
+        {/* Mobile Menu Toggle */}
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           {mounted ? (
             menuOpen ? (

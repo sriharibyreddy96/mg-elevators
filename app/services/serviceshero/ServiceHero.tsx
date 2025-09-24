@@ -2,17 +2,16 @@
 import React from "react";
 import styles from "./ServiceHero.module.css";
 import Image from "next/image";
-// import bgImage from "public/assets/services/Service_Hero.jpeg"; 
+import withBasePath from "../../utils/withBasePath";
 
 const ServiceHero: React.FC = () => {
-
   return (
     <section className={styles.hero}>
       {/* Background Image */}
       <div className={styles.background}>
         <Image
-          src="/assets/services/serviceshero.jpg"
-          alt="Contact Background"
+          src={withBasePath("/assets/services/serviceshero.jpg")}
+          alt="Services Background"
           fill
           priority
           className={styles.bgImage}

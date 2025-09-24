@@ -1,19 +1,21 @@
+"use client";
 import React from "react";
 import styles from "./Clients.module.css";
 import Image from "next/image";
+import withBasePath from "../../../utils/withBasePath"; // ✅ import utility
 
 const clientLogos = [
-  "/assets/Clients/Client1.jpg",
-  "/assets/Clients/Client2.jpg",
-  "/assets/Clients/Client3.jpg",
-  "/assets/Clients/Client4.jpg",
-  "/assets/Clients/Client5.jpg",
-  "/assets/Clients/Client6.jpg",
-  "/assets/Clients/Client7.jpg",
-  "/assets/Clients/Client8.jpg",
-  "/assets/Clients/Client9.jpg",
-  "/assets/Clients/Client10.jpg",
-  "/assets/Clients/Client11.jpg",
+  withBasePath("/assets/Clients/Client1.jpg"),
+  withBasePath("/assets/Clients/Client2.jpg"),
+  withBasePath("/assets/Clients/Client3.jpg"),
+  withBasePath("/assets/Clients/Client4.jpg"),
+  withBasePath("/assets/Clients/Client5.jpg"),
+  withBasePath("/assets/Clients/Client6.jpg"),
+  withBasePath("/assets/Clients/Client7.jpg"),
+  withBasePath("/assets/Clients/Client8.jpg"),
+  withBasePath("/assets/Clients/Client9.jpg"),
+  withBasePath("/assets/Clients/Client10.jpg"),
+  withBasePath("/assets/Clients/Client11.jpg"),
 ];
 
 export default function Clients() {

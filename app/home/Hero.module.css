@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("/assets/background/Elevator_Background_3.jpg");
+  /* background-image removed, handled inline via withBasePath */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
