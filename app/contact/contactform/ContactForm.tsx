@@ -97,12 +97,12 @@ const ContactForm: React.FC = () => {
 
             <h4>Business Hours</h4>
             <p>Mon - Sat: 9:00 AM – 6:00 PM</p>
-            <p>In Emergency 24/7 Available 
+            <p>Sunday: Closed</p>
+            <p>In Emergency 24/7 Available &nbsp;&nbsp;
             <Link href="/contact" className={styles.contactBtn}>
                       Contact Us
                     </Link>  
             </p>
-            <p>Sunday: Closed</p>
           </div>
         </div>
 

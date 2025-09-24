@@ -26,13 +26,13 @@ const products: Product[] = [
         title: "Auto Door",
         description:
           "Our auto-door residential elevators ensure modern convenience with smooth, automated operation and enhanced safety.",
-        image: "./assets/products/AutoDoor1.jpg",
+        image: "/assets/products/AutoDoor1.jpg",
       },
       {
         title: "Manual Door",
         description:
           "Manual door elevators are cost-effective, reliable, and ideal for residential use, offering easy operation and durability.",
-        image: "./assets/products/ManualDoor.jpg",
+        image: "/assets/products/ManualDoor.jpg",
       },
     ],
   },
@@ -40,7 +40,7 @@ const products: Product[] = [
     title: "Hydraulic Elevators",
     description:
       "Hydraulic elevators are built for durability and high load capacity, best suited for low to mid-rise buildings.",
-    image: "./assets/products/Hydraulic.jpg",
+    image: "/assets/products/Hydraulic.jpg",
   },
   {
     title: "Home Elevators",
@@ -49,19 +49,19 @@ const products: Product[] = [
         title: "MRL Lifts",
         description:
           "Machine Room Less (MRL) lifts save space while providing efficient vertical transportation for modern homes.",
-        image: "./assets/products/MRL_Lift.jpg",
+        image: "/assets/products/MRL_Lift.jpg",
       },
       {
         title: "Belt Lifts",
         description:
           "Belt-driven lifts are designed for silent operation and energy efficiency, enhancing residential comfort.",
-        image: "./assets/products/Belt_Lift.jpg",
+        image: "/assets/products/Belt_Lift.jpg",
       },
       {
         title: "Traction Lifts",
         description:
           "Traction lifts deliver a smooth, fast, and safe experience, perfect for high-rise residential and commercial spaces.",
-        image: "./assets/products/Fraction_lift.jpg",
+        image: "/assets/products/Fraction_lift.jpg",
       },
     ],
   },
@@ -69,19 +69,19 @@ const products: Product[] = [
     title: "Goods Elevators",
     description:
       "Goods elevators are heavy-duty lifts designed to transport large and bulky items in warehouses, factories, and industries.",
-    image: "./assets/products/Goods_Lift.jpg",
+    image: "/assets/products/Goods_Lift.jpg",
   },
   {
     title: "Structure Elevators",
     description:
       "Structure elevators are self-supporting and can be installed without a machine room or shaft wall, ideal for retrofits.",
-    image: "./assets/products/Structure_Lift.jpg",
+    image: "/assets/products/Structure_Lift.jpg",
   },
   {
     title: "Commercial Elevators",
     description:
       "Commercial elevators are built for heavy usage, combining aesthetics and performance for offices, malls, and complexes.",
-    image: "./assets/products/Commercial_Lifts.jpeg",
+    image: "/assets/products/Commercial_Lifts.jpeg",
   },
 ];
 

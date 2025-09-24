@@ -9,7 +9,7 @@ export default function Aboutus() {
         {/* Left Side - Image */}
         <div className={styles.left}>
           <Image
-            src="./assets/about/About_Background.png"
+            src="/assets/about/About_Background.png"
             alt="MG Elevators"
             width={600}
             height={500}
@@ -33,13 +33,13 @@ export default function Aboutus() {
           {/* Founder Section */}
           <div className={styles.founder}>
             <Image
-              src="./assets/about/Founder.jpg"
+              src="/assets/about/Founder.jpg"
               alt="Founder"
               width={80}
               height={80}
               className={styles.founderImage}
             />
-            <p className={styles.founderName}>MG Elevators – Founder</p>
+            <p className={styles.founderName}>Metakoti Gowri Prasad – Founder</p>
           </div>
         </div>
       </div>
