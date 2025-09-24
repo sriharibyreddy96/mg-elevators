@@ -3,13 +3,14 @@ import type { NextConfig } from "next";
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  output: "export", // enables static export
+  output: "export",
   basePath: isProd ? "/mg-elevators" : "",
   assetPrefix: isProd ? "/mg-elevators/" : "",
-  trailingSlash: true, // recommended for GitHub Pages
+  trailingSlash: true, 
   images: {
-    unoptimized: true, // required for GitHub Pages
+    unoptimized: true,
   },
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;
