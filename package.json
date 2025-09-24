@@ -5,7 +5,7 @@
   "homepage": "https://sriharibyreddy96.github.io/mg-elevators",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "preview": "serve out",
     "lint": "eslint",
     "predeploy": "npm run build",
