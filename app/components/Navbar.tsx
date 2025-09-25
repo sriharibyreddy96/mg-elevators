@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="logo">
           <Link href="/">
             <Image
-              src={withBasePath("/assets/logo/Logo2.png")}
+              src={withBasePath("./assets/logo/Logo2.png")}
               alt="MG Elevators Logo"
               width={120}
               height={50}

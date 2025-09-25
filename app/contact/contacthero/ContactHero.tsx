@@ -22,7 +22,7 @@ const ContactHero: React.FC = () => {
       {/* Background Image */}
       <div className={styles.background}>
         <Image
-          src={withBasePath("/assets/gallery/home/home1.jpg")} // ✅ updated with base path
+          src={withBasePath("./assets/gallery/home/home1.jpg")} // ✅ updated with base path
           alt="Contact Background"
           fill
           priority

@@ -19,42 +19,42 @@ const services = [
     description:
       "We provide 24/7 customer support and quick repair solutions to keep your elevators running smoothly.",
     icon: <FaHeadset />,
-    image: "/assets/services/Customer_Support.png",
+    image: "./assets/services/Customer_Support.png",
   },
   {
     title: "Maintenance",
     description:
       "Regular maintenance services to ensure reliability, safety, and long-lasting performance of your elevators.",
     icon: <FaTools />,
-    image: "/assets/services/Maintanance.png",
+    image: "./assets/services/Maintanance.png",
   },
   {
     title: "Services",
     description:
       "Comprehensive elevator services including inspections, upgrades, and on-demand support.",
     icon: <FaCogs />,
-    image: "/assets/services/Services.png",
+    image: "./assets/services/Services.png",
   },
   {
     title: "Engineering Support",
     description:
       "Expert engineering support for custom elevator solutions and complex project requirements.",
     icon: <FaDraftingCompass />,
-    image: "/assets/services/Engineering_Support.png",
+    image: "./assets/services/Engineering_Support.png",
   },
   {
     title: "Replacement / Modernization",
     description:
       "Upgrade or replace existing elevators with modern, energy-efficient systems for better performance.",
     icon: <FaSyncAlt />,
-    image: "/assets/services/Replacement.png",
+    image: "./assets/services/Replacement.png",
   },
   {
     title: "Technical Assistance",
     description:
       "Our experts are ready to provide technical assistance to resolve issues and improve efficiency.",
     icon: <FaWrench />,
-    image: "/assets/services/Technical_Assistance.png",
+    image: "./assets/services/Technical_Assistance.png",
   },
 ];
 

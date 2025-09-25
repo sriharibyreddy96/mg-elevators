@@ -8,31 +8,31 @@ const sections = [
   {
     title: "Home Elevators",
     images: Array.from({ length: 15 }, (_, i) =>
-      withBasePath(`/assets/gallery/home/home${i + 1}.jpg`)
+      withBasePath(`./assets/gallery/home/home${i + 1}.jpg`)
     ),
   },
   {
     title: "Office Elevators",
     images: Array.from({ length: 13 }, (_, i) =>
-      withBasePath(`/assets/gallery/office/Office${i + 1}.jpg`)
+      withBasePath(`./assets/gallery/office/Office${i + 1}.jpg`)
     ),
   },
   {
     title: "Hospital Elevators",
     images: Array.from({ length: 6 }, (_, i) =>
-      withBasePath(`/assets/gallery/hospital/Hospital${i + 1}.jpg`)
+      withBasePath(`./assets/gallery/hospital/Hospital${i + 1}.jpg`)
     ),
   },
   {
     title: "Hydraulic Elevators",
     images: Array.from({ length: 4 }, (_, i) =>
-      withBasePath(`/assets/gallery/hydralic/Hydralic${i + 1}.jpg`)
+      withBasePath(`./assets/gallery/hydralic/Hydralic${i + 1}.jpg`)
     ),
   },
   {
     title: "Additional Elevators",
     images: Array.from({ length: 15 }, (_, i) =>
-      withBasePath(`/assets/gallery/additional/Additional${i + 1}.jpg`)
+      withBasePath(`./assets/gallery/additional/Additional${i + 1}.jpg`)
     ),
   },
 ];

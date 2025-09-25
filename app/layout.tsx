@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Elevating Comfort, Safety & Innovation for Homes, Apartments, and Hospitals",
   icons: {
-    icon: withBasePath("/assets/favicon.png"), // Updated with base path
+    icon: withBasePath("./assets/favicon.png"), // Updated with base path
   },
 };
 

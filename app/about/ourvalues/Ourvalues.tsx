@@ -13,7 +13,7 @@ const VALUE_BLOCKS = [
       "Reliability – Consistent uptime & smooth rides",
       "Customer Commitment – Long-term trust",
     ],
-    image: withBasePath("/assets/background/Aboutus_Elevator2.jpeg"), // ✅ wrapped
+    image: withBasePath("./assets/background/Aboutus_Elevator2.jpeg"), // ✅ wrapped
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
   {
@@ -23,7 +23,7 @@ const VALUE_BLOCKS = [
       "Smart Mobility – Ready for smart buildings",
       "Sustainability – Energy-efficient systems",
     ],
-    image: withBasePath("/assets/background/Aboutus_Elevator2.jpeg"),
+    image: withBasePath("./assets/background/Aboutus_Elevator2.jpeg"),
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
   {
@@ -33,7 +33,7 @@ const VALUE_BLOCKS = [
       "Ownership – Accountable end-to-end",
       "Compassion – Comfort & accessibility",
     ],
-    image: withBasePath("/assets/background/Aboutus_Elevator2.jpeg"),
+    image: withBasePath("./assets/background/Aboutus_Elevator2.jpeg"),
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
   {
@@ -43,7 +43,7 @@ const VALUE_BLOCKS = [
       "Continuous Improvement – Evolving tech",
       "Service First – Fast, reliable support",
     ],
-    image: withBasePath("/assets/background/Aboutus_Elevator2.jpeg"),
+    image: withBasePath("./assets/background/Aboutus_Elevator2.jpeg"),
     overlay: "rgba(65,105,225,0.55)", // #4169E1
   },
 ];

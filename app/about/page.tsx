@@ -6,7 +6,7 @@ import styles from "./About.module.css";
 import withBasePath from "../utils/withBasePath"; // ✅ helper
 
 export default function About() {
-  const backgroundImage = withBasePath("/assets/background/Aboutus_Elevator2.jpeg");
+  const backgroundImage = withBasePath("./assets/background/Aboutus_Elevator2.jpeg");
 
   return (
     <section

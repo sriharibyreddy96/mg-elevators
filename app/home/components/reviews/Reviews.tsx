@@ -8,37 +8,37 @@ const reviews = [
   {
     id: 1,
     name: "Rajapushpa Properties",
-    image: withBasePath("/assets/home/Clients_Reviews/Client9.jpg"),
+    image: withBasePath("./assets/home/Clients_Reviews/Client9.jpg"),
     text: "MG Elevators made our apartment rides smooth, safe, and reliable. Truly world-class service!",
   },
   {
     id: 2,
     name: "Choudhary Jewellers",
-    image: withBasePath("/assets/home/Clients_Reviews/Client1.jpg"),
+    image: withBasePath("./assets/home/Clients_Reviews/Client1.jpg"),
     text: "Very professional installation and modern design. Our residents love the new elevators.",
   },
   {
     id: 3,
     name: "SLN Developer",
-    image: withBasePath("/assets/home/Clients_Reviews/Client8.jpg"),
+    image: withBasePath("./assets/home/Clients_Reviews/Client8.jpg"),
     text: "MG Elevators provides excellent maintenance and quick support whenever needed.",
   },
   {
     id: 4,
     name: "Rudhra Constructions",
-    image: withBasePath("/assets/home/Clients_Reviews/Client11.jpg"),
+    image: withBasePath("./assets/home/Clients_Reviews/Client11.jpg"),
     text: "Energy-efficient and smart elevators! A perfect choice for our commercial building.",
   },
   {
     id: 5,
     name: "SVLN Developers",
-    image: withBasePath("/assets/home/Clients_Reviews/Client6.jpg"),
+    image: withBasePath("./assets/home/Clients_Reviews/Client6.jpg"),
     text: "Stylish cabins with smooth rides. Our guests always compliment the elevators.",
   },
   {
     id: 6,
     name: "Utsav Fashion",
-    image: withBasePath("/assets/home/Clients_Reviews/Client3.jpg"),
+    image: withBasePath("./assets/home/Clients_Reviews/Client3.jpg"),
     text: "MG Elevators has the best customer service and reliable products. Highly recommended!",
   },
 ];

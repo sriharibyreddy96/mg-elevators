@@ -10,7 +10,7 @@ const ServiceHero: React.FC = () => {
       {/* Background Image */}
       <div className={styles.background}>
         <Image
-          src={withBasePath("/assets/services/serviceshero.jpg")}
+          src={withBasePath("./assets/services/serviceshero.jpg")}
           alt="Services Background"
           fill
           priority

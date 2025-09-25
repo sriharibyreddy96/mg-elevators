@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <section
       className={styles.hero}
       style={{
-        backgroundImage: `url(${withBasePath("/assets/background/Elevator_Background_3.jpg")})`,
+        backgroundImage: `url(${withBasePath("./assets/background/Elevator_Background_3.jpg")})`,
       }}
     >
       <div className={styles.overlay}>

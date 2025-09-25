@@ -5,17 +5,17 @@ import Image from "next/image";
 import withBasePath from "../../../utils/withBasePath"; // ✅ import utility
 
 const clientLogos = [
-  withBasePath("/assets/Clients/Client1.jpg"),
-  withBasePath("/assets/Clients/Client2.jpg"),
-  withBasePath("/assets/Clients/Client3.jpg"),
-  withBasePath("/assets/Clients/Client4.jpg"),
-  withBasePath("/assets/Clients/Client5.jpg"),
-  withBasePath("/assets/Clients/Client6.jpg"),
-  withBasePath("/assets/Clients/Client7.jpg"),
-  withBasePath("/assets/Clients/Client8.jpg"),
-  withBasePath("/assets/Clients/Client9.jpg"),
-  withBasePath("/assets/Clients/Client10.jpg"),
-  withBasePath("/assets/Clients/Client11.jpg"),
+  withBasePath("./assets/Clients/Client1.jpg"),
+  withBasePath("./assets/Clients/Client2.jpg"),
+  withBasePath("./assets/Clients/Client3.jpg"),
+  withBasePath("./assets/Clients/Client4.jpg"),
+  withBasePath("./assets/Clients/Client5.jpg"),
+  withBasePath("./assets/Clients/Client6.jpg"),
+  withBasePath("./assets/Clients/Client7.jpg"),
+  withBasePath("./assets/Clients/Client8.jpg"),
+  withBasePath("./assets/Clients/Client9.jpg"),
+  withBasePath("./assets/Clients/Client10.jpg"),
+  withBasePath("./assets/Clients/Client11.jpg"),
 ];
 
 export default function Clients() {
