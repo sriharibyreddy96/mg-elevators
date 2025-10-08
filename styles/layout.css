@@ -27,8 +27,8 @@
   max-height: 40px;
   width: 100px;
   object-fit: cover;
-  background-color: #fff;
-  border-radius: 3px;
+  /* background-color: #fff; */
+  border-radius: 15px;
 }
 
 /* ============================= */

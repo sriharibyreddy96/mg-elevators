@@ -1,0 +1,103 @@
+.customDesignSection {
+  padding: 4rem 2rem;
+  background-color: #B9D9EB;
+  display: flex;
+  justify-content: center;
+  margin: 2px 0px;
+}
+
+.contentWrapper {
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #000080;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ===== Glowing Animated Button ===== */
+.ctaButton {
+  position: relative;
+  background-color: #000080;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1;
+}
+
+.ctaButton:hover {
+  background-color: #4169E1;
+  transform: translateY(-3px);
+}
+
+/* Animated Border Effect */
+.glowBorder {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #00008B, #4169E1, #00BFFF, #4169E1, #00008B);
+  background-size: 400%;
+  z-index: -1;
+  animation: rotateGlow 6s linear infinite;
+  filter: blur(4px);
+}
+
+/* Button Inner Layer */
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000080;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* Animation Keyframes */
+@keyframes rotateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    padding: 1rem;
+  }
+}

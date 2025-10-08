@@ -192,7 +192,7 @@ const ContactFormModal: React.FC = () => {
           <textarea
             className={styles.formTextarea}
             name="message"
-            placeholder="Your Message"
+            placeholder="Your Message (Ex: I Need Home Elevator With Auto Door)"
             value={formData.message}
             onChange={handleChange}
             required

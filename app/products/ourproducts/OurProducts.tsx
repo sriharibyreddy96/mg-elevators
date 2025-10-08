@@ -62,7 +62,7 @@ const products: Product[] = [
         title: "Traction Lifts",
         description:
           "Traction lifts deliver a smooth, fast, and safe experience, perfect for high-rise residential and commercial spaces.",
-        image: withBasePath("./assets/products/Fraction_lift.jpg"),
+        image: withBasePath("./assets/products/Fraction_Lift.jpg"),
       },
     ],
   },

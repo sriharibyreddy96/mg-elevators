@@ -7,6 +7,7 @@ import Call from "./home/components/call/Call";
 import Whatsapp from "./home/components/whatsapp/Whatsapp";
 import type { Metadata } from "next";
 import withBasePath from "./utils/withBasePath"; // Ensure this exists
+import Broucher from "./home/components/Broucher/Broucher";
 
 export const metadata: Metadata = {
   title: "MG Elevators",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <main className="main-content">{children}</main>
         <Whatsapp />
         <Call />
+        <Broucher />
         <Footer />
         <ContactFormModal />
       </body>

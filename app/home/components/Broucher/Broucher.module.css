@@ -1,0 +1,113 @@
+/* Wrapper position */
+.wrapper {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 1000;
+}
+
+/* Button Base */
+.downloadBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: Red;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  height: 42px;
+  min-width: 180px;
+  box-shadow: 0 0 8px rgba(0, 0, 139, 0.4);
+  transform: translateZ(0); /* GPU acceleration */
+  will-change: transform, box-shadow;
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+/* Text */
+.text {
+  white-space: nowrap;
+}
+
+/* Border Animation (outside border) */
+.borderAnimation {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px; /* Border thickness */
+  background: linear-gradient(
+    90deg,
+    #4169e1,
+    #4b9cd3,
+    #b9d9eb,
+    #000080,
+    #4169e1
+  );
+  background-size: 300%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: borderFlow 4s linear infinite;
+  z-index: 0;
+}
+
+/* Animate glowing border */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover State */
+.downloadBtn:hover {
+  background-color: #4169e1;
+  box-shadow: 0 0 16px rgba(65, 105, 225, 0.7);
+  transform: scale(1.02);
+}
+
+/* Hover text glow */
+.downloadBtn:hover .text {
+  color: #fff;
+  text-shadow: 0 0 6px #b9d9eb;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .wrapper {
+    left: auto;
+    right: 20px;
+    bottom: 165px;
+  }
+
+  .downloadBtn {
+    height: 38px;
+    min-width: 160px;
+    font-size: 0.85rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+}

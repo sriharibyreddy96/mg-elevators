@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="logo">
           <Link href="/">
             <Image
-              src={withBasePath("./assets/logo/Logo2.png")}
+              src={withBasePath("./assets/logo/Logo14.png")}
               alt="MG Elevators Logo"
               width={120}
               height={50}
@@ -47,17 +47,21 @@ export default function Navbar() {
         {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link href="/" onClick={handleLinkClick}>Home</Link>
+            <Link href="/" onClick={handleLinkClick}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/about" onClick={handleLinkClick}>About</Link>
+            <Link href="/about" onClick={handleLinkClick}>
+              About
+            </Link>
           </li>
 
           {/* Products Dropdown */}
           <li className="dropdown">
             <Link
-              href="/products"
-              onClick={handleLinkClick}
+              href="#"
+              // onClick={handleLinkClick}
               className="dropdown-toggle"
             >
               Products <FaAngleDown className="icon" />
@@ -75,7 +79,10 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products#manual-door" onClick={handleLinkClick}>
+                    <Link
+                      href="/products#manual-door"
+                      onClick={handleLinkClick}
+                    >
                       Manual Door
                     </Link>
                   </li>
@@ -83,7 +90,10 @@ export default function Navbar() {
               </li>
 
               <li>
-                <Link href="/products#hydraulic-elevators" onClick={handleLinkClick}>
+                <Link
+                  href="/products#hydraulic-elevators"
+                  onClick={handleLinkClick}
+                >
                   Hydraulic Elevators
                 </Link>
               </li>
@@ -104,7 +114,10 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products#traction-lifts" onClick={handleLinkClick}>
+                    <Link
+                      href="/products#traction-lifts"
+                      onClick={handleLinkClick}
+                    >
                       Traction Lifts
                     </Link>
                   </li>
@@ -112,17 +125,26 @@ export default function Navbar() {
               </li>
 
               <li>
-                <Link href="/products#goods-elevators" onClick={handleLinkClick}>
+                <Link
+                  href="/products#goods-elevators"
+                  onClick={handleLinkClick}
+                >
                   Goods Elevators
                 </Link>
               </li>
               <li>
-                <Link href="/products#structure-elevators" onClick={handleLinkClick}>
+                <Link
+                  href="/products#structure-elevators"
+                  onClick={handleLinkClick}
+                >
                   Structure Elevators
                 </Link>
               </li>
               <li>
-                <Link href="/products#commercial-elevators" onClick={handleLinkClick}>
+                <Link
+                  href="/products#commercial-elevators"
+                  onClick={handleLinkClick}
+                >
                   Commercial Elevators
                 </Link>
               </li>
@@ -130,13 +152,19 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/services" onClick={handleLinkClick}>Services</Link>
+            <Link href="/services" onClick={handleLinkClick}>
+              Services
+            </Link>
           </li>
           <li>
-            <Link href="/gallery" onClick={handleLinkClick}>Gallery</Link>
+            <Link href="/gallery" onClick={handleLinkClick}>
+              Gallery
+            </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={handleLinkClick}>Contact</Link>
+            <Link href="/contact" onClick={handleLinkClick}>
+              Contact
+            </Link>
           </li>
         </ul>
 

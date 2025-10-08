@@ -32,7 +32,7 @@ const sections = [
   {
     title: "Additional Elevators",
     images: Array.from({ length: 15 }, (_, i) =>
-      withBasePath(`./assets/gallery/additional/Additional${i + 1}.jpg`)
+      withBasePath(`./assets/gallery/additional/additional${i + 1}.jpg`)
     ),
   },
 ];

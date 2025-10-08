@@ -169,7 +169,7 @@ const ContactForm: React.FC = () => {
             </select>
             <textarea
               name="message"
-              placeholder="Your Message"
+              placeholder="Your Message (Ex: I Need Home Elevator With Auto Door)"
               rows={4}
               value={formData.message}
               onChange={handleChange}

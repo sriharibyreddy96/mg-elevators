@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className={styles.left}>
           <div className={styles.logo}>
             <Image
-              src={withBasePath("./assets/logo/Logo2.png")} // ✅ wrapped with helper
+              src={withBasePath("./assets/logo/Logo14.png")} // ✅ wrapped with helper
               alt="MG Elevators Logo"
               width={120}
               height={40}
